@@ -13,44 +13,44 @@
     </div>
     <div class="posts">
       <div class="post">
-        <img src="./images/person1.jpg" alt="">
+        <a href="post.php"><img src="./images/person1.jpg" alt=""></a>
         <div class="post-body">
-          <h3 class="title">Title</h3>
+          <a href="post.php"><h3 class="title">Title</h3></a>
           <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, perferendis! Nulla quas reprehenderit tenetur. Reiciendis consequatur harum molestiae sunt voluptatum.</p>
         </div>
       </div>
       <div class="post">
-        <img src="./images/person1.jpg" alt="">
+        <a href="post.php"><img src="./images/person1.jpg" alt=""></a>
         <div class="post-body">
-          <h3 class="title">Title</h3>
+          <a href="post.php"><h3 class="title">Title</h3></a>
           <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, perferendis! Nulla quas reprehenderit tenetur. Reiciendis consequatur harum molestiae sunt voluptatum.</p>
         </div>
       </div>
       <div class="post">
-        <img src="./images/person1.jpg" alt="">
+        <a href="post.php"><img src="./images/person1.jpg" alt=""></a>
         <div class="post-body">
-          <h3 class="title">Title</h3>
+          <a href="post.php"><h3 class="title">Title</h3></a>
           <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, perferendis! Nulla quas reprehenderit tenetur. Reiciendis consequatur harum molestiae sunt voluptatum.</p>
         </div>
       </div>
       <div class="post">
-        <img src="./images/person1.jpg" alt="">
+        <a href="post.php"><img src="./images/person1.jpg" alt=""></a>
         <div class="post-body">
-          <h3 class="title">Title</h3>
+          <a href="post.php"><h3 class="title">Title</h3></a>
           <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, perferendis! Nulla quas reprehenderit tenetur. Reiciendis consequatur harum molestiae sunt voluptatum.</p>
         </div>
       </div>
       <div class="post">
-        <img src="./images/person1.jpg" alt="">
+        <a href="post.php"><img src="./images/person1.jpg" alt=""></a>
         <div class="post-body">
-          <h3 class="title">Title</h3>
+          <a href="post.php"><h3 class="title">Title</h3></a>
           <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, perferendis! Nulla quas reprehenderit tenetur. Reiciendis consequatur harum molestiae sunt voluptatum.</p>
         </div>
       </div>
       <div class="post">
-        <img src="./images/person1.jpg" alt="">
+        <a href="post.php"><img src="./images/person1.jpg" alt=""></a>
         <div class="post-body">
-          <h3 class="title">Title</h3>
+          <a href="post.php"><h3 class="title">Title</h3></a>
           <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, perferendis! Nulla quas reprehenderit tenetur. Reiciendis consequatur harum molestiae sunt voluptatum.</p>
         </div>
       </div>
