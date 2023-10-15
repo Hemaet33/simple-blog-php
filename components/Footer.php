@@ -5,7 +5,7 @@
       <input type="text" name="name" placeholder="Name">
       <input type="email" name="email" placeholder="Email">
       <input type="text" name="message" placeholder="Message">
-      <button>Send</i></button>
+      <button>Send <i class="fa-solid fa-share"></i></button>
     </form>
   </div>
   <div class="footer-copyright">
