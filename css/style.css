@@ -54,12 +54,17 @@ transform-origin: right;
 .header nav .right li:hover:after{
   transform: scale(1);
 }
+.header nav .profile-avatar{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
 .header nav .profile-avatar img{
   width: 40px;
   height: 40px;
   border-radius: 50%;
   border:1px solid #000;
-  cursor: pointer;
 }
 
 

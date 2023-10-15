@@ -22,6 +22,7 @@
 
       <span class="profile-avatar">
         <img src="./images/person1.jpg" alt="profile-avatar">
+        <span>Hemayet Riyad</span>
       </span>
     </nav>
   <!-- Profile -->
