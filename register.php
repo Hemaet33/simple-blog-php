@@ -7,12 +7,14 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="login">
-    <form action="" class="login-form">
+  <div class="register">
+    <form action="" class="register-form">
+      <input type="text" placeholder="Name" name="name" />
       <input type="email" placeholder="Email" name="email" />
       <input type="password" placeholder="Password" name="password" />
-      <button>Login</button>
-      <a href="register.php">Don't have an account?</a>
+      <input type="password" placeholder="Confirm Password" name="cpassword" />
+      <button>Register</button>
+      <a href="login.php">Already have an account?</a>
     </form>
   </div>
 </body>

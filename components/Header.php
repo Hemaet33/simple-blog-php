@@ -15,8 +15,8 @@
         <a href="index.php" class="logo">Blog</a>
       </div>
       <ul class="right">
-        <li><a href="">Login</a></li>
-        <li><a href="">Register</a></li>
+        <li><a href="login.php">Login</a></li>
+        <li><a href="register.php">Register</a></li>
         <li><a href="">Logout</a></li>
       </ul>
 
