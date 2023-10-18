@@ -560,3 +560,12 @@ footer .footer-copyright{
 .register form.register-form a{
   text-decoration: underline;
 }
+
+
+span.success{
+  color: teal;
+}
+
+span.failure{
+  color: rgb(247, 123, 139);
+}
