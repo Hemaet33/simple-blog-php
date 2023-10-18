@@ -43,5 +43,15 @@ class Database{
       return false;
     }
   }
+
+  public function getAUser($id){
+    $query="SELECT * FROM users WHERE id='$id'";
+    $data = $this->connection->query($query);
+    if($data->num_rows > 0){
+      return $data->fetch_assoc();
+    }else{
+      return false;
+    }
+  }
 }
 ?>

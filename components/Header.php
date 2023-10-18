@@ -50,14 +50,14 @@ if(isset($_GET['action']) && $_GET['action']=='logout'){
         <span class="cancel">x</span>
         <img src="./images/person1.jpg" alt="profile-avatar">
         <div class="profile-info">
-          <span class="name">Hemayet Riyad</span>
-          <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse laborum ipsam in rem inventore ab voluptatibus facere nesciunt sed saepe cumque magni blanditiis id facilis, repudiandae illo voluptates. Repellat hic similique quos. Ipsa, inventore at laborum ad iste iure architecto?</p>
+          <span class="name"><?php echo $session::get('name'); ?></span>
+          <p class="description"><?php echo $session::get('description'); ?></p>
           <div class="social">
           <a target="_blank" href=""><i class="fa-brands fa-facebook-f"></i></a>
           <a target="_blank" href=""><i class="fa-brands fa-linkedin"></i></a>
           <a target="_blank" href=""><i class="fa-brands fa-instagram"></i></a>
           </div>
         </div>
-        <a href="./editprofile.php" class="edit-profile">Edit profile</a>
+        <a href="./editprofile.php?id=<?php echo $session::get('id'); ?>" class="edit-profile">Edit profile</a>
       </div>
   </div>
