@@ -53,5 +53,15 @@ class Database{
       return false;
     }
   }
+
+  public function updateUser($name,$description,$facebook,$linkedin,$instagram,$id){
+    $query="UPDATE users SET name='$name', description='$description', facebook='$facebook', linkedin='$linkedin', instagram='$instagram' WHERE id='$id'";
+    $data = $this->connection->query($query);
+    if($data){
+      return "<span class='success'>You updated successfully.</span>";
+    }else{
+      return false;
+    }
+  }
 }
 ?>
