@@ -27,7 +27,7 @@
         <a href="profile.php?id=<?php echo $post['userId']; ?>" class="author"><?php echo $author['name']; ?></a>
         </div>
       </div>
-      <p class="body"><?php echo $post['description']; ?></p>
+      <p class="body"><?php echo substr($post['description'],0,200); ?> ...</p>
     </div>
     <?php }} ?>
   </div>
