@@ -1,6 +1,7 @@
 const profile = document.getElementById("profile");
-
-document.querySelector('.header nav .profile-avatar')?.addEventListener("click",()=>{
+const profileAvatar = document.querySelector('.header nav .profile-avatar');
+if(profileAvatar != null){
+profileAvatar.addEventListener("click",()=>{
   if(profile.getAttribute("data")=="visible"){
     profile.style.right="-100%";
     profile.style.display="none";
@@ -11,7 +12,11 @@ document.querySelector('.header nav .profile-avatar')?.addEventListener("click",
     profile.setAttribute("data",'visible')
   }
 });
-document.querySelector('.right-hamburger .profile-avatar')?.addEventListener("click",()=>{
+}
+const humAvatar = document.querySelector('.right-hamburger .profile-avatar');
+
+if(humAvatar !=null){
+humAvatar.addEventListener("click",()=>{
   if(profile.getAttribute("data")=="visible"){
     profile.style.right="-100%";
     profile.style.display="none";
@@ -22,7 +27,7 @@ document.querySelector('.right-hamburger .profile-avatar')?.addEventListener("cl
     profile.setAttribute("data",'visible')
   }
 });
-
+}
 document.querySelector('#profile .cancel').addEventListener("click",()=>{
     profile.style.right="-100%";
     profile.style.display="none";

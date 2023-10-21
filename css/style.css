@@ -813,7 +813,17 @@ span.failure{
   .home .posts .post{
     width: 90%;
   }
-  
+  .single-profile .profile{
+    width: 90%;
+  }
+  .single-profile .profile img{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+  .single-profile .profile .profile-body{
+    flex-direction: column;
+  }
   footer .footer-contact .contact{
     width: 100%;
   }
