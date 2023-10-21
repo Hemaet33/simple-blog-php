@@ -843,4 +843,7 @@ span.failure{
   .register form.register-form{
     padding: 20px;
   }
+  .single-post .post{
+    width: 90%;
+  }
 }
