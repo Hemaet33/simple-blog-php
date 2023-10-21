@@ -1,7 +1,5 @@
 <?php include('./components/Header.php') ?>
 <?php
-include('queries.php');
-$db=new Database();
 if(!$session::chechLoggedIn()){
   header('Location:login.php');
 }
@@ -46,6 +44,8 @@ if(!$session::chechLoggedIn()){
     }
 
     $msg = $db->updateUser($name,$description,$facebook,$linkedin,$instagram,$id);
+    $session::set('name',$name);
+    $session::set('description',$description);
     $session::set('facebook',$facebook);
     $session::set('linkedin',$linkedin);
     $session::set('instagram',$instagram);

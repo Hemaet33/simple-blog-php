@@ -24,9 +24,9 @@
          }else{
           $q = "SELECT * FROM users WHERE email='$email' LIMIT 1";
           $res=$db->select($q);
-          $hashed=$res['password'];
-          $check = password_verify($password, $hashed);
           if($res){
+            $hashed=$res['password'];
+            $check = password_verify($password, $hashed);
             if($check){
               $session::init();
               $session::set('loggedIn',true);

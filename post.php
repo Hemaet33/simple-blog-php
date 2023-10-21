@@ -1,12 +1,25 @@
 <?php include("./components/Header.php") ?>
+<?php 
+if(isset($_GET['id'])){
+  $id=$_GET['id'];
+  $post=$db->getAPost($id);
+}
+?>
   <div class="main">
    <div class="single-post">
     <div class="post">
-      <img src="./images/person1.jpg" alt="">
+      <?php if($post){ 
+        if($post['image']){
+      ?>
+      <img src="<?php echo $post['image']; ?>" alt="">
+      <?php }else{ ?>
+      <img src="./images/post_place.png" alt="">
+      <?php } ?>
       <div class="post-body">
-        <h2>Title</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam atque nostrum libero obcaecati in illum magni nobis saepe mollitia id. In nemo, expedita soluta at quod tenetur ipsum provident. Praesentium ut laudantium voluptates asperiores necessitatibus tempore, natus pariatur accusantium atque nisi nobis, corrupti commodi voluptatem, culpa magni quam consequuntur optio eaque nostrum exercitationem voluptate! Dolorem, delectus. Porro aut et cum numquam rerum iusto eum mollitia unde. Quod dignissimos iure, deleniti omnis quis, dicta repellendus earum nemo cum enim quas rerum! Doloremque consequuntur, provident suscipit possimus asperiores magnam distinctio aspernatur sint deserunt vero ratione quidem debitis quas tenetur aliquid! Culpa, ea.</p>
+        <h2><?php echo $post['title']; ?></h2>
+        <p><?php echo $post['description']; ?></p>
       </div>
+      <?php } ?>
     </div>
    </div>
     <?php include('./components/LatestPosts.php') ?>

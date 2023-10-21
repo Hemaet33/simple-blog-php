@@ -1,15 +1,32 @@
 <?php include("./components/Header.php") ?>
-  <div class="main">
-   <div class="single-profile">
-   <div class="profile">
-     <div class="profile-body">
-      <img src="./images/person1.jpg" alt="">
-        <h1>Hemayet Riyad</h1>
-        
-      </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam atque nostrum libero obcaecati in illum magni nobis saepe mollitia id. In nemo, expedita soluta at quod tenetur ipsum provident. Praesentium ut laudantium voluptates asperiores necessitatibus tempore, natus pariatur accusantium atque nisi nobis, corrupti commodi voluptatem, culpa magni quam consequuntur optio eaque nostrum exercitationem voluptate! Dolorem, delectus. Porro aut et cum numquam rerum iusto eum mollitia unde. Quod dignissimos iure, deleniti omnis quis, dicta repellendus earum nemo cum enim quas rerum! Doloremque consequuntur, provident suscipit possimus asperiores magnam distinctio aspernatur sint deserunt vero ratione quidem debitis quas tenetur aliquid! Culpa, ea.</p>
+<?php 
+if(isset($_GET['id'])){
+  $id = $_GET['id'];
+  $author=$db->getAUser($id);
+}
+?>
+<div class="main">
+  <div class="single-profile">
+    <div class="profile">
+        <div class="profile-body">
+          <?php if($author){ 
+            if($author['profilePic']) {
+            ?>
+            <img src="<?php echo $author['profilePic']; ?>" alt="">
+            <?php }else{ ?>
+              <img src="./images/no_avatar.png" alt="">
+            <?php } ?>
+              <h1><?php echo $author['name']; ?></h1>
+        </div>
+          <p><?php echo $author['description']; ?></p>
+        <?php } ?>
+        <div class="social">
+          <a target="_blank" href="<?php echo $author['facebook']; ?>"><i class="fa-brands fa-facebook-f"></i></a>
+          <a target="_blank" href="<?php echo $author['linkedin']; ?>"><i class="fa-brands fa-linkedin"></i></a>
+          <a target="_blank" href="<?php echo $author['instagram']; ?>"><i class="fa-brands fa-instagram"></i></a>
+          </div>
     </div>
-   </div>
-    <?php include('./components/LatestPosts.php') ?>
   </div>
-  <?php include('./components/Footer.php') ?>
+<?php include('./components/LatestPosts.php') ?>
+</div>
+<?php include('./components/Footer.php') ?>

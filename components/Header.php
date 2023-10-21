@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <?php
+  include('queries.php');
+  $db=new Database();
   include('session.php');
   $session=new Session();
   $session::init();
@@ -56,11 +58,6 @@ if(isset($_GET['action']) && $_GET['action']=='logout'){
         <div class="profile-info">
           <span class="name"><?php echo $session::get('name'); ?></span>
           <p class="description"><?php echo $session::get('description'); ?></p>
-          <div class="social">
-          <a target="_blank" href="<?php echo $session::get('facebook'); ?>"><i class="fa-brands fa-facebook-f"></i></a>
-          <a target="_blank" href="<?php echo $session::get('linkedin'); ?>"><i class="fa-brands fa-linkedin"></i></a>
-          <a target="_blank" href="<?php echo $session::get('instagram'); ?>"><i class="fa-brands fa-instagram"></i></a>
-          </div>
         </div>
         <a href="./editprofile.php?id=<?php echo $session::get('id'); ?>" class="edit-profile">Edit profile</a>
       </div>

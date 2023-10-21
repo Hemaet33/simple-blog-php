@@ -54,11 +54,65 @@ class Database{
     }
   }
 
+  public function getAPost($id){
+    $query="SELECT * FROM posts WHERE id='$id'";
+    $data = $this->connection->query($query);
+    if($data->num_rows > 0){
+      return $data->fetch_assoc();
+    }else{
+      return false;
+    }
+  }
+
   public function updateUser($name,$description,$facebook,$linkedin,$instagram,$id){
     $query="UPDATE users SET name='$name', description='$description', facebook='$facebook', linkedin='$linkedin', instagram='$instagram' WHERE id='$id'";
     $data = $this->connection->query($query);
     if($data){
       return "<span class='success'>You updated successfully.</span>";
+    }else{
+      return false;
+    }
+  }
+
+  public function updatePost($title,$description,$category,$id){
+    $query="UPDATE posts SET title='$title', description='$description',category='$category' WHERE id='$id'";
+    $data = $this->connection->query($query);
+    if($data){
+      return "<span class='success'>You updated successfully.</span>";
+    }else{
+      return false;
+    }
+  }
+
+  public function createPost($query){ 
+    $data = $this->connection->query($query);
+    if($data){
+      return "<span class='success'>You added a post.</span>";
+    }else{
+      return false;
+    }
+  }
+  public function getPosts($query){
+    $data = $this->connection->query($query);
+    if($data->num_rows>0){
+      return $data;
+    }else{
+      return false;
+    }
+  }
+  public function delete($query){
+    $data = $this->connection->query($query);
+    if($data){
+      return true;
+    }else{
+      return false;
+    }
+  }
+  public function getCategories(){
+    $query = "SELECT DISTINCT category FROM posts";
+    $data = $this->connection->query($query);
+    if($data->num_rows>0){
+      return $data;
     }else{
       return false;
     }
