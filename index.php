@@ -90,7 +90,14 @@
       $posts = $db->getPosts($query);
      }
      if($posts){
-      while($post = $posts->fetch_assoc()){ ?>
+      while($post = $posts->fetch_assoc()){ 
+        $userId = $post['userId'];
+        $q = "SELECT name FROM users WHERE id='$userId'";
+        $author = $db->connection->query($q);
+        if($author->num_rows>0){
+        $author = $author->fetch_assoc();
+        }  
+      ?>
       <div class="post">
         <a href="post.php?id=<?php echo $post['id']; ?>"><?php
         if($post['image']){ ?>
@@ -100,6 +107,7 @@
       <?php } ?></a>
         <div class="post-body">
           <a href="post.php?id=<?php echo $post['id']; ?>"><h3 class="title"><?php echo $post['title']; ?></h3></a>
+          <a href="profile.php?id=<?php echo $post['userId']; ?>" class="author"><?php echo $author['name']; ?></a>
           <p class="description"><?php echo substr($post['description'],0,150).' ...'; ?></p>
         </div>
         <?php
