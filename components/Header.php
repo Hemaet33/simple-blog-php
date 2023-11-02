@@ -67,7 +67,7 @@ if(isset($_GET['action']) && $_GET['action']=='logout'){
 
       <?php if($session::chechLoggedIn()){ ?>
       <span class="profile-avatar">
-        <?php if($session::get('profilePic')){ ?>
+        <?php if($session::get('profilePic') and is_dir($session::get('profilePic'))){ ?>
         <img src="<?php echo $session::get('profilePic'); ?>" alt="profile-avatar">
         <?php }else{ ?>
           <img src="./images/no_avatar.png" alt="profile-avatar">

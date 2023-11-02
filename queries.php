@@ -117,5 +117,42 @@ class Database{
       return false;
     }
   }
+
+  public function addComment($postId,$userId,$name,$profilePic,$comment){
+    $query="INSERT INTO comments(postId, userId,name,profilePic,comment) VALUES('$postId','$userId','$name','$profilePic','$comment')";
+    $data = $this->connection->query($query);
+    if($data){
+      return true;
+    }else{
+      return false;
+    }
+  }
+  public function addReply($commentId,$userId,$name,$profilePic,$reply){
+    $query="INSERT INTO replies(commentId, userId,name,profilePic,reply) VALUES('$commentId','$userId','$name','$profilePic','$reply')";
+    $data = $this->connection->query($query);
+    if($data){
+      return true;
+    }else{
+      return false;
+    }
+  }
+  public function getComments($postId){
+    $query="SELECT * FROM comments WHERE postId='$postId'";
+    $data = $this->connection->query($query);
+    if($data->num_rows > 0){
+      return $data;
+    }else{
+      return false;
+    }
+  }
+  public function getReplies($commentId){
+    $query="SELECT * FROM replies WHERE commentId='$commentId'";
+    $data = $this->connection->query($query);
+    if($data->num_rows > 0){
+      return $data;
+    }else{
+      return false;
+    }
+  }
 }
 ?>
