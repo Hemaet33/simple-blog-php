@@ -5,6 +5,8 @@ if(!$session::chechLoggedIn()){
 }
 ?>
 <div class="main">
+  <div class="home">
+    <?php include('./components/Sidebar.php'); ?>
 <div class="edit-profile">
   <?php if(isset($_GET['id'])){ 
     $id=$_GET['id'];
@@ -44,8 +46,7 @@ if(!$session::chechLoggedIn()){
     }
 
     $msg = $db->updatePost($title,$description,$category,$id);
-    echo $msg;
-    $post = $db->getAPost($id);
+    header('Location:index.php');
    }
 
   if($post){
@@ -68,6 +69,6 @@ if(!$session::chechLoggedIn()){
    </form>
    <?php } ?>
    </div>
-   <?php include('./components/LatestPosts.php') ?>
+      </div>
   </div>
 <?php include('./components/Footer.php') ?>

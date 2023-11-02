@@ -100,6 +100,15 @@ class Database{
       return false;
     }
   }
+  public function getAllPosts(){
+    $query = "SELECT * FROM posts";
+    $data = $this->connection->query($query);
+    if($data->num_rows>0){
+      return $data;
+    }else{
+      return false;
+    }
+  }
   public function delete($query){
     $data = $this->connection->query($query);
     if($data){
@@ -109,10 +118,37 @@ class Database{
     }
   }
   public function getCategories(){
-    $query = "SELECT DISTINCT category FROM posts";
+    $query = "SELECT * FROM categories";
     $data = $this->connection->query($query);
     if($data->num_rows>0){
       return $data;
+    }else{
+      return false;
+    }
+  }
+  public function getCategory($id){
+    $query="SELECT * FROM categories WHERE id='$id'";
+    $data = $this->connection->query($query);
+    if($data->num_rows>0){
+      return $data->fetch_assoc();
+    }else{
+      return false;
+    }
+  }
+  public function deleteCategory($id){
+    $query = "DELETE FROM categories WHERE id='$id'";
+    $data = $this->connection->query($query);
+    if($data){
+      return "<span class='success'>You deleted a category.</span>";
+    }else{
+      return false;
+    }
+  }
+  public function updateCategory($id, $category){
+    $query = "UPDATE categories SET category='$category' WHERE id='$id'";
+    $data = $this->connection->query($query);
+    if($data){
+      return "<span class='success'>You updated a category.</span>";
     }else{
       return false;
     }
@@ -132,6 +168,15 @@ class Database{
     $data = $this->connection->query($query);
     if($data){
       return true;
+    }else{
+      return false;
+    }
+  }
+  public function addCategory($category){
+    $query="INSERT INTO categories(category) VALUES('$category')";
+    $data = $this->connection->query($query);
+    if($data){
+      return "<span class='success'>You added a category.</span>";
     }else{
       return false;
     }

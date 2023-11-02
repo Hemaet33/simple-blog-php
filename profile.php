@@ -6,6 +6,8 @@ if(isset($_GET['id'])){
 }
 ?>
 <div class="main">
+  <div class="home">
+  <?php include('./components/Sidebar.php'); ?>
   <div class="single-profile">
     <div class="profile">
         <div class="profile-body">
@@ -27,6 +29,6 @@ if(isset($_GET['id'])){
           </div>
     </div>
   </div>
-<?php include('./components/LatestPosts.php') ?>
+            </div>
 </div>
 <?php include('./components/Footer.php') ?>

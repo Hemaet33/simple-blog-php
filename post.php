@@ -23,6 +23,8 @@ if($_SERVER['REQUEST_METHOD']=="POST" && isset($_POST['post_reply'])){
 }
 ?>
   <div class="main">
+    <div class="home">
+    <?php include('./components/Sidebar.php'); ?>
    <div class="single-post">
     <div class="post">
       <?php if($post){ 
@@ -102,6 +104,6 @@ if($_SERVER['REQUEST_METHOD']=="POST" && isset($_POST['post_reply'])){
     <?php } ?>
    </div>
    </div>
-    <?php include('./components/LatestPosts.php') ?>
+    </div>
   </div>
   <?php include('./components/Footer.php') ?>
