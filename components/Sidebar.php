@@ -7,7 +7,7 @@
         $categories = $db->getCategories();
         if($categories){
           while($cat=$categories->fetch_assoc()){ ?>
-        <li><a href="index.php?category=<?php echo $cat['category']; ?>" class="cat"><?php echo ucfirst($cat['category']); ?></a></li>
+        <li><a href="posts.php?category=<?php echo $cat['category']; ?>" class="cat"><?php echo ucfirst($cat['category']); ?></a></li>
         <?php }} ?>
         </div>
         <li><a href="categories.php">Categories</a></li>
